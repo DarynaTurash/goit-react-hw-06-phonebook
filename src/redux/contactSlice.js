@@ -15,9 +15,15 @@ const contactsSlice = createSlice({
                 } else {
                     state.push(newContact);
                 };
+
+                localStorage.setItem('contacts', JSON.stringify(state));
             },
         deleteContact: (state, action) => {
-                return state.filter(contact => contact.id !== action.payload)   
+            const updatedState = state.filter(contact => contact.id !== action.payload);
+
+            localStorage.setItem('contacts', JSON.stringify(updatedState));
+
+            return updatedState; 
             },
         filterContacts: (state, action) => {
                 return state.filter(contact => contact.name.toLowerCase().includes(action.payload));

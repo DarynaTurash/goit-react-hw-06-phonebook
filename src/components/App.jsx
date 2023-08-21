@@ -5,26 +5,7 @@ import { Layout } from './layout/layout';
 import { Filter } from './filter/filter';
 
 
-// const LS_KEY = "contacts-phonebook";
-
 export const App = () => {
-
-  
-// useEffect(() => {
-//     const contacts = localStorage.getItem(LS_KEY);
-//     if(contacts && Array.isArray(JSON.parse(contacts)) && JSON.parse(contacts).length > 0) {
-//       setContacts(JSON.parse(contacts));
-//     }
-// }, []);
-
-// useEffect(() => {
-//     localStorage.setItem(LS_KEY, JSON.stringify(contacts));
-//   }, [contacts])
-
-
-
-
-
 
 return (
     <Layout>
